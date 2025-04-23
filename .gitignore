@@ -7,3 +7,5 @@ data/
 kaggle.json
 leapGestRecog/
 venv/
+leapGestRecog/ .
+data.zip
