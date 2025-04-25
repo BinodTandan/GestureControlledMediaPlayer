@@ -7,7 +7,7 @@ import pyautogui
 import time
 
 # Load the trained model
-model = load_model('model/gesture_mobileNET_model_final.h5')
+model = load_model('model/gesture_MobilenetV2_model.h5')
 print("Model loaded successfully!")
 
 # Model input shape (same as training)
