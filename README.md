@@ -19,6 +19,10 @@ Control your media player using real-time hand gestures and a CNN-based classifi
 
 ## Project Structure:
 - `data/` – Gesture images organized by class
-- `train_model.py` – CNN model training
+- `train_model.ipynb` – CNN model training
 - `real_time_control.py` – Real-time gesture recognition and control
+- `model/` – Trained Models
+- `utils/preprocess.py` – Webcamp frame resizing
+
+
 
