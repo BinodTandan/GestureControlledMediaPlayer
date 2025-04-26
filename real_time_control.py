@@ -5,6 +5,8 @@ from tensorflow.keras.models import load_model
 from utils.preprocess import preprocess_frame
 import pyautogui
 import time
+import pygetwindow as gw
+
 
 # Load the trained model
 model = load_model('model/gesture_MobilenetV2_model.h5')
@@ -25,9 +27,38 @@ gesture_map = {
     5: 'volume_up'
 }
 
+
+
+# Create the window Focus Function
+def focus_media_player_window(window_title):
+    try:
+        windows = gw.getWindowsWithTitle(window_title)
+        if not windows:
+            print(f"[WARNING] No window found with title: '{window_title}'. Make sure the media player is open!")
+            return
+        window = windows[0]
+        if window.isMinimized:
+            window.restore()  # Restore if minimized
+            time.sleep(0.2)   # Allow time to restore
+
+        if not window.isActive:
+            try:
+                window.activate()
+                print(f"[INFO] Focused on: {window_title}")
+            except gw.PyGetWindowException as e:
+                print(f"[WARNING] Could not activate window: {e}")
+        else:
+            print(f"[INFO] {window_title} is already in focus.")
+    except Exception as e:
+        print(f"[ERROR] Unexpected error while focusing window: {e}")
+        
 # Action trigger function using pyautogui
 def perform_action(action):
     print(f"Performing action: {action}")
+    
+    focus_media_player_window("VLC media player")
+    time.sleep(0.2)
+    
     if action == 'play' or action == 'pause':
         pyautogui.press('space')
     elif action == 'stop':
