@@ -52,4 +52,23 @@ python real_time_control.py
 ```
 ⚠️ Make sure your webcam is connected and the trained model (.h5 file) is located in the model/ directory.
 
+## 🧩 Dependencies:
+
+Python 3.x
+TensorFlow / Keras
+OpenCV
+Numpy
+Matplotlib
+PyAutoGUI
+PyGetWindow
+
+(These can be listed in a requirements.txt file for easy installation.)
+
+## Results Summary:
+Baseline CNN: Achieved ~99% accuracy on the test dataset but failed to maintain stable predictions during real-time webcam testing.
+
+MobileNetV2: Achieved 98–100% test accuracy and provided consistent, reliable predictions in real-time recognition scenarios.
+
+Prediction buffer and majority voting significantly improved real-time stability and reduced noisy gesture predictions.
+
 
