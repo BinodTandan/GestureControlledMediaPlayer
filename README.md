@@ -54,21 +54,28 @@ python real_time_control.py
 
 ## 🧩 Dependencies:
 
-Python 3.x
-TensorFlow / Keras
-OpenCV
-Numpy
-Matplotlib
-PyAutoGUI
-PyGetWindow
+- Python 3.x
+- TensorFlow / Keras
+- OpenCV
+- Numpy
+- Matplotlib
+- PyAutoGUI
+- PyGetWindow
 
 (These can be listed in a requirements.txt file for easy installation.)
 
 ## Results Summary:
-Baseline CNN: Achieved ~99% accuracy on the test dataset but failed to maintain stable predictions during real-time webcam testing.
+- Baseline CNN: Achieved ~99% accuracy on the test dataset but failed to maintain stable      predictions during real-time webcam testing.
 
-MobileNetV2: Achieved 98–100% test accuracy and provided consistent, reliable predictions in real-time recognition scenarios.
+- MobileNetV2: Achieved 98–100% test accuracy and provided consistent, reliable predictions in real-time recognition scenarios.
 
-Prediction buffer and majority voting significantly improved real-time stability and reduced noisy gesture predictions.
+- Prediction buffer and majority voting significantly improved real-time stability and reduced noisy gesture predictions.
+
+## 🖼️ Visual Results:
+- Confusion matrices for both models were generated on the test set to analyze class-wise performance.
+
+- Learning curves (accuracy and loss) show faster convergence and greater stability for the MobileNetV2 model.
+
+- Real-time demo outputs confirm effective gesture recognition and correct action mapping during live webcam testing.
 
 
