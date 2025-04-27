@@ -78,4 +78,7 @@ python real_time_control.py
 
 - Real-time demo outputs confirm effective gesture recognition and correct action mapping during live webcam testing.
 
+## 🙏 Acknowledgments:
+This project is inspired by previous research on gesture-based media control and CNN-based gesture recognition systems. Special thanks to related works that guided the methodology and evaluation process.
+
 
