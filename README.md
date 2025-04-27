@@ -34,10 +34,12 @@ Control your media player using real-time hand gestures and a CNN-based classifi
 ```bash
 git clone https://github.com/BinodTandan/GestureControlledMediaPlayer.git
 cd gesture-controlled-media-player
-
+```
 
 ### Install required dependencies
+```bash
 pip install -r requirements.txt
+```
 
 ### Run the training notebook:
 Open train_model.ipynb in Jupyter Notebook.
