@@ -47,6 +47,9 @@ Execute all cells in order.
 Ensure that the notebook is fully executed with output cells visible.
 
 ### Real-time gesture recognition and media control:
-Real-time gesture recognition and media control:
+```bash
+python real_time_control.py
+```
+⚠️ Make sure your webcam is connected and the trained model (.h5 file) is located in the model/ directory.
 
 
